@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>David Lewis — Electrical Engineering Consultant</title>
+  <!-- Google Fonts: modern sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">DL</div>
+        <div>
+          <div style="font-weight:700">David Lewis</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Electrical Engineering Consultant</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#standards">Standards</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#standards" onclick="closeMenu()">Standards</a></li>
+          <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+          <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="container hero">
+      <div class="hero--copy reveal">
+        <div class="title">Electrical Engineering Consultant</div>
+        <h1>David Lewis</h1>
+        <p class="lead">Delivering pragmatic, code-compliant electrical design and field engineering for critical infrastructure and industrial projects—30+ years of hands-on experience ensuring reliability and safety.</p>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="cta" href="#contact">Contact for Consultation</a>
+          <a href="#standards" style="color:var(--muted);font-weight:600">Standards Contributions →</a>
+        </div>
+      </div>
+
+      <div class="headshot reveal" aria-hidden="true">
+        <!-- Placeholder headshot as SVG; replace with real photo later -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Headshot placeholder">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#e6f0ff"/>
+              <stop offset="1" stop-color="#dbeeff"/>
+            </linearGradient>
+          </defs>
+          <rect width="200" height="200" rx="20" fill="url(#g)"/>
+          <g transform="translate(20,30)" fill="#0b2545">
+            <circle cx="60" cy="40" r="28" opacity="0.95"/>
+            <rect x="6" y="90" width="108" height="70" rx="12"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container reveal">
+      <div class="section-title">
+        <h2>About</h2>
+        <div class="section-sub">Thirty+ years in electrical engineering, from field work to standards development</div>
+      </div>
+
+      <div class="about">
+        <div class="card">
+          <p><strong>David Lewis</strong> is a licensed electrical engineer with over 30 years of experience delivering high-stakes power distribution, design, testing, and commissioning services. He has worked across utility, industrial, commercial, and healthcare projects—leading teams, troubleshooting complex systems, and ensuring NEC/IEEE compliance on-site and in design.</p>
+          <ul style="margin-top:12px;color:var(--muted)">
+            <li>Years of experience: 30+</li>
+            <li>Expertise: Power distribution, switchgear design, fault analysis, protective relaying, field commissioning</li>
+            <li>Licenses: PE (Electrical)</li>
+          </ul>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin-top:0">Areas of Expertise</h3>
+          <ul style="padding-left:18px;color:var(--muted)">
+            <li>Medium- and low-voltage distribution</li>
+            <li>Protective device coordination & arc-flash studies</li>
+            <li>Standards & code development (NEC, IEEE)</li>
+            <li>Field troubleshooting and commissioning</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- STANDARDS CONTRIBUTIONS (alternate shaded section) -->
+    <section id="standards" class="alt reveal">
+      <div class="container">
+        <div class="section-title">
+          <h2>Standards Contributions</h2>
+          <div class="section-sub">Representative involvement in technical committees and working groups</div>
+        </div>
+
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+          <!-- Each "standard" card shows icon, name, and role; visually appealing chips -->
+          <div class="standard">
+            <div class="badge">IEEE</div>
+            <div class="meta">
+              <div style="font-weight:600">IEEE Std. 142</div>
+              <div class="role">Contributor — Grounding Practices</div>
+            </div>
+          </div>
+
+          <div class="standard">
+            <div class="badge">NEC</div>
+            <div class="meta">
+              <div style="font-weight:600">NEC Article 110</div>
+              <div class="role">Committee Reviewer</div>
+            </div>
+          </div>
+
+          <div class="standard">
+            <div class="badge">IEC</div>
+            <div class="meta">
+              <div style="font-weight:600">IEC 60364</div>
+              <div class="role">Technical Advisor</div>
+            </div>
+          </div>
+
+          <div class="standard">
+            <div class="badge">NFPA</div>
+            <div class="meta">
+              <div style="font-weight:600">NFPA 70E</div>
+              <div class="role">Safety & Arc-Flash Contributor</div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:18px;color:rgba(255,255,255,0.85);max-width:70ch">David regularly contributes to working groups and provides expert review on proposed changes to electrical code, focusing on safety, grounding, and practical implementation in industrial environments.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE HIGHLIGHTS -->
+    <section id="experience" class="container reveal">
+      <div class="section-title">
+        <h2>Experience Highlights</h2>
+        <div class="section-sub">Selected projects and outcomes—concise and impactful</div>
+      </div>
+
+      <div class="grid-3">
+        <div class="highlight">
+          <strong>Critical Data Center Upgrade</strong>
+          <p style="color:var(--muted)">Led power system redesign and commissioning for a 10 MW data center, improving redundancy and reducing downtime risk during maintenance operations.</p>
+        </div>
+
+        <div class="highlight">
+          <strong>Utility Interconnection</strong>
+          <p style="color:var(--muted)">Managed coordination with utility partners for interconnection of a 15 MW industrial generation facility, ensuring code compliance and streamlined approvals.</p>
+        </div>
+
+        <div class="highlight">
+          <strong>Panel Forensics & Repair</strong>
+          <p style="color:var(--muted)">Performed root-cause analysis and remediation on safety-critical switchgear faults, preventing recurring outages and improving system resilience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="alt">
+      <div class="container reveal">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <div class="section-sub">On-site and field work—real-world engineering in action</div>
+        </div>
+
+        <div class="gallery" style="margin-top:18px">
+          <div class="photo" tabindex="0">
+            <img alt="On-site commissioning" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+            <div class="caption">On-site commissioning</div>
+          </div>
+
+          <div class="photo" tabindex="0">
+            <img alt="Field troubleshooting" src="https://images.unsplash.com/photo-1551033406-611cf9a7b3c1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+            <div class="caption">Field troubleshooting</div>
+          </div>
+
+          <div class="photo" tabindex="0">
+            <img alt="At a panel" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+            <div class="caption">Inspection at switchgear</div>
+          </div>
+
+          <div class="photo" tabindex="0">
+            <img alt="Presenting at a panel" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder">
+            <div class="caption">Panel & training</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container reveal">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <div class="section-sub">Simple, direct ways to reach out for consulting or speaking engagements</div>
+      </div>
+
+      <div class="contact-row" style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+        <div class="card" style="flex:1;min-width:300px">
+          <p style="margin-top:0">For project inquiries, standards consulting, or site assessments, reach out directly—response within 48 hours.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+            <div><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/davidlewis</a></div>
+          </div>
+        </div>
+
+        <div style="min-width:280px">
+          <!-- Lightweight contact form that opens mail client (no backend) -->
+          <form id="contactForm" class="card" onsubmit="return handleContact(event)">
+            <label style="display:block;margin-bottom:8px">Message</label>
+            <textarea id="message" rows="5" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(11,37,69,0.06);resize:vertical" placeholder="Brief description of your project or question"></textarea>
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <input id="email" type="email" placeholder="Your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(11,37,69,0.06)">
+              <button type="submit" class="cta">Send</button>
+            </div>
+            <div id="formNote" style="margin-top:10px;color:var(--muted);font-size:0.9rem">This form will open your email client to send a message.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+          <div>© <strong>David Lewis</strong> — Electrical Engineering Consultant</div>
+          <div style="color:var(--muted)">Available for consulting, speaking, and standards work</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ==========================
+       Lightweight JS: smooth interactions, reveal on scroll, simple contact handling
+       No frameworks, well-commented for beginners
+       ========================== -->
+  <script src="script.js"></script>
+</body>
+</html>

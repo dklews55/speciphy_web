@@ -1,0 +1,126 @@
+/* ==========================
+   Variables & Base Styles
+   Clean, easily adjustable design tokens
+   ========================== */
+:root{
+  --navy:#0b2545; /* primary */
+  --muted:#6b7380;
+  --accent:#ffb400; /* engineering-appropriate warm accent */
+  --bg:#ffffff;
+  --max-width:1100px;
+  --radius:12px;
+  --gap:28px;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--navy);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  scroll-behavior:smooth; /* smooth scrolling */
+  line-height:1.5;
+}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ==========================
+   Layout
+   ========================== */
+.container{max-width:var(--max-width);margin:0 auto;padding:48px 20px}
+
+/* Top navigation */
+header{position:sticky;top:0;backdrop-filter:blur(6px);z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{display:flex;gap:12px;align-items:center}
+.brand .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--navy),#122a4f);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+nav a{padding:8px 10px;border-radius:8px;color:var(--muted)}
+nav a:hover{color:var(--navy);background:rgba(11,37,69,0.04)}
+
+/* Mobile menu */
+.menu-toggle{display:none;width:30px;height:24px;flex-direction:column;justify-content:space-between;cursor:pointer}
+.menu-toggle span{display:block;width:100%;height:3px;background:var(--navy);border-radius:2px;transition:0.3s}
+.menu-toggle.open span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+.mobile-menu{position:absolute;top:100%;left:0;right:0;background:white;border-top:1px solid rgba(11,37,69,0.06);box-shadow:0 4px 12px rgba(11,37,69,0.1);display:none}
+.mobile-menu ul{flex-direction:column;gap:0;padding:16px 20px}
+.mobile-menu a{display:block;padding:12px 0;border-bottom:1px solid rgba(11,37,69,0.04);color:var(--navy)}
+.mobile-menu a:last-child{border-bottom:none}
+
+/* Hero */
+.hero{display:flex;gap:40px;align-items:center;padding:48px 0}
+.hero--copy{flex:1}
+.hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 6px 0}
+.hero .title{color:var(--muted);font-weight:600;margin-bottom:14px}
+.hero p.lead{font-size:1.05rem;color:#243346;max-width:58ch;margin-bottom:18px}
+
+.headshot{width:160px;height:160px;border-radius:18px;overflow:hidden;flex-shrink:0;background:linear-gradient(180deg,#f5f7fb,#eef4ff);display:flex;align-items:center;justify-content:center;border:1px solid rgba(11,37,69,0.06)}
+.headshot svg{width:100%;height:100%;object-fit:cover}
+
+/* Section rhythm */
+section{padding:64px 0}
+section.alt{background:#0b2545;color:white}
+section.alt a{color:inherit}
+.section-title{display:flex;align-items:baseline;gap:16px;margin-bottom:18px}
+.section-title h2{margin:0;font-size:1.15rem}
+.section-sub{color:var(--muted);font-size:0.95rem}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 320px;gap:var(--gap)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00));padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,37,69,0.06);border:1px solid rgba(11,37,69,0.04)}
+
+/* Standards contributions — visually interesting chips */
+.standards-grid{display:flex;flex-wrap:wrap;gap:14px}
+.standard{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00));border:1px solid rgba(11,37,69,0.06);min-width:220px}
+.badge{width:44px;height:44px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);box-shadow:0 4px 10px rgba(11,37,69,0.06)}
+.standard .meta{font-size:0.95rem}
+.role{font-size:0.82rem;color:var(--muted)}
+
+/* Experience highlights */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.highlight{padding:18px;border-radius:12px;background:white;border:1px solid rgba(11,37,69,0.04)}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.photo{position:relative;border-radius:10px;overflow:hidden;cursor:pointer}
+.photo img{transition:transform .6s cubic-bezier(.2,.9,.3,1);transform-origin:center}
+.photo:hover img{transform:scale(1.06)}
+.photo .caption{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg,rgba(0,0,0,0.55),rgba(0,0,0,0.25));color:white;padding:8px 10px;border-radius:8px;font-size:0.86rem}
+
+/* Contact */
+.contact-row{display:flex;gap:20px;align-items:center}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;background:var(--accent);color:var(--navy);font-weight:600}
+
+/* Footer */
+footer{padding:28px 0;color:var(--muted);font-size:0.95rem}
+
+/* ==========================
+   Animations (Intersection Observer toggles .in-view)
+   ========================== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
+.reveal.in-view{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:880px){
+  .about{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .hero{flex-direction:column;align-items:flex-start}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .headshot{width:140px;height:140px}
+  nav ul{display:none}
+  .menu-toggle{display:flex}
+}
+
+@media (max-width:480px){
+  .gallery{grid-template-columns:1fr}
+  .standards-grid{flex-direction:column}
+  .standard{min-width:unset}
+  .contact-row{flex-direction:column;gap:16px}
+}
