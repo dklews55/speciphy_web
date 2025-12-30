@@ -38,6 +38,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    
+    toggle.classList.toggle('active');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
+function closeMobileMenu() {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    
+    toggle.classList.remove('active');
+    menu.style.display = 'none';
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        closeMobileMenu();
+    }
+});
+
 // Optional: highlight nav links on scroll (simple approach)
 (function(){
   const sections = Array.from(document.querySelectorAll('main section'));

@@ -1,24 +1,29 @@
-# Speciphy | Electrical Engineering Consulting Website
+# Speciphy | Optical Standards Engineering
 
-A modern, professional single-page website for an independent electrical engineering consultant.
+A professional website for an optical standards engineer specializing in high-speed optical communications, IEEE 802.3, OIF, ITU-T, and MSA contributions.
 
 ## Features
 
-- **Hero Section**: Professional label, compelling headline, description, call-to-action buttons, and headshot placeholder
-- **About**: Engineering expertise overview with skills list
-- **Standards Contributions**: Grid of key standards with detailed descriptions
-- **Experience**: Timeline-style career highlights
-- **Gallery**: 4-column grid with hover effects and captions
-- **Contact**: Centered contact information with direct links
-- **Navigation**: Fixed navbar with scroll effects and smooth scrolling
+- **Hero Section**: Professional introduction as an optical standards engineer with 25+ years experience
+- **About**: Optical communications expertise and industry specialization
+- **Standards Contributions**: Detailed showcase of IEEE 802.3, OIF, ITU-T, and MSA work
+- **Experience**: Timeline of optical engineering career from early 10G work to current 800G standards
+- **Gallery**: Technical work photos including standards meetings and interoperability testing
+- **Contact**: Direct contact information for optical standards consulting
+
+## Technical Focus
+
+- **IEEE 802.3**: Ethernet standards for 100G, 400G, 800G optical interfaces
+- **OIF**: Optical Internetworking Forum contributions for coherent optics and pluggable modules
+- **ITU-T**: International standards for optical transport networks (OTN)
+- **MSAs**: Multi-source agreements for QSFP-DD, OSFP, COBO, and other pluggable optics
 
 ## Design
 
-- **Color Scheme**: Navy (#0a1628), Blue accent (#3b82f6), Clean grays and whites
-- **Typography**: Inter font family for modern, professional appearance
-- **Layout**: Full-width sections with generous spacing
-- **Animations**: Scroll-triggered fade-in animations and smooth transitions
-- **Mobile Responsive**: Optimized for all device sizes with mobile navigation
+- **Professional Color Scheme**: Navy blue, modern accents, clean typography
+- **Responsive Design**: Optimized for desktop, tablet, and mobile viewing
+- **Smooth Animations**: Scroll-triggered reveals and hover effects
+- **Modern UI**: Clean, minimal design with focus on content and credibility
 
 ## Technical Details
 
@@ -26,8 +31,7 @@ A modern, professional single-page website for an independent electrical enginee
 - No frameworks or build steps required
 - Modern CSS Grid and Flexbox layouts
 - Intersection Observer for scroll animations
-- Smooth scrolling navigation
-- Mobile-first responsive design
+- Mobile-first responsive design with hamburger menu
 
 ## File Structure
 
@@ -53,11 +57,11 @@ A modern, professional single-page website for an independent electrical enginee
 - **Content**: Edit text directly in `index.html`
 - **Colors**: Modify CSS variables in `:root` section of `style.css`
 - **Headshot**: Replace the placeholder div in the hero section with an actual image
-- **Gallery Images**: Update the placeholder divs with real images
-- **Contact Info**: Change email, phone, and LinkedIn links in the contact section
+- **Gallery Images**: Update the placeholder divs with real technical photos
+- **Contact Info**: Update email and LinkedIn links in the contact section
 
-## Browser Support
+## Contact
 
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Graceful degradation for older browsers
+For optical standards consulting or technical discussions:
+- Email: david.lewis@speciphy.com
+- Available for standards development, interoperability guidance, and expert technical consulting

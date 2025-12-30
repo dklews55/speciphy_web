@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Speciphy | Electrical Engineering Consulting</title>
+  <title>Speciphy | Optical Standards Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,11 +22,20 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav-toggle">
+      <div class="nav-toggle" onclick="toggleMobileMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#standards" onclick="closeMobileMenu()">Standards</a></li>
+        <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+        <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -34,9 +43,9 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-label">Electrical Engineering Consultant</span>
-        <h1>Building Safer, Smarter Power Systems</h1>
-        <p>35+ years of expertise in power systems design, standards development, and engineering excellence.</p>
+        <span class="hero-label">Optical Standards Engineer</span>
+        <h1>Advancing Optical<br>Communications Standards</h1>
+        <p>25+ years driving optical networking standards and interoperability. IEEE 802.3, OIF, ITU-T, and MSA contributor shaping the future of high-speed optical communications.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">
             Get in Touch
@@ -59,19 +68,19 @@
   <section class="about" id="about">
     <div class="container">
       <span class="section-label">About</span>
-      <h2>Engineering Excellence,<br>Decades of Experience</h2>
+      <h2>Optical Standards<br>& Interoperability</h2>
       <div class="about-content animate-on-scroll">
         <div class="about-text">
-          <p>With over three decades in electrical engineering, I've dedicated my career to advancing power systems safety and efficiency. From utility-scale projects to standards development, my work has shaped how we design and implement electrical infrastructure.</p>
-          <p>I specialize in translating complex technical requirements into practical, code-compliant solutions. Whether you're navigating interconnection standards, designing distributed energy systems, or need expert testimony, I bring deep expertise and a pragmatic approach.</p>
+          <p>With over 25 years in optical communications, I've dedicated my career to developing and advancing standards that enable high-speed, reliable optical networks. My work spans from physical layer specifications to system-level interoperability, ensuring that optical technologies work seamlessly across vendors and applications.</p>
+          <p>I specialize in optical standards development, multi-vendor interoperability testing, and technical leadership in industry forums. Whether you're developing new optical products, navigating complex standards requirements, or need expert guidance on optical system design, I bring deep technical expertise and practical industry experience.</p>
         </div>
         <div class="expertise">
           <ul class="expertise-list">
-            <li>Power Systems Design</li>
-            <li>Interconnection Standards</li>
-            <li>Distributed Energy Resources</li>
-            <li>Code Compliance</li>
-            <li>Expert Witness Services</li>
+            <li>Optical Standards Development</li>
+            <li>Multi-Vendor Interoperability</li>
+            <li>High-Speed Optical Systems</li>
+            <li>Industry Forum Leadership</li>
+            <li>Technical Consulting</li>
           </ul>
         </div>
       </div>
@@ -82,28 +91,28 @@
   <section class="standards" id="standards">
     <div class="container">
       <span class="section-label">Standards Contributions</span>
-      <h2>Shaping Industry Standards</h2>
-      <p class="standards-intro">Active contributor to the development of electrical codes and standards that define safe, reliable power systems.</p>
+      <h2>Leading Optical<br>Standards Development</h2>
+      <p class="standards-intro">Active contributor to key optical communications standards and multi-source agreements that drive industry interoperability.</p>
       <div class="standards-grid">
         <div class="standard-card animate-on-scroll">
-          <div class="standard-code">IEEE 1547-2018</div>
-          <h3>Interconnection Standards</h3>
-          <p>Standard for Interconnection and Interoperability of Distributed Energy Resources with Associated Electric Power Systems Interfaces.</p>
+          <div class="standard-code">IEEE 802.3</div>
+          <h3>Ethernet Standards</h3>
+          <p>Contributed to high-speed Ethernet standards including 100G, 400G, and emerging 800G optical interfaces. Member of the IEEE 802.3 Ethernet Working Group.</p>
         </div>
         <div class="standard-card animate-on-scroll">
-          <div class="standard-code">IEEE 1547.1</div>
-          <h3>Conformance Test Procedures</h3>
-          <p>Test procedures for equipment interconnecting distributed resources with electric power systems.</p>
+          <div class="standard-code">OIF</div>
+          <h3>Optical Internetworking Forum</h3>
+          <p>Active participant in OIF projects for coherent optics, pluggable modules, and multi-vendor interoperability. Contributed to CEI-56G and 112G electrical interfaces.</p>
         </div>
         <div class="standard-card animate-on-scroll">
-          <div class="standard-code">NEC Article 705</div>
-          <h3>Interconnected Power Production</h3>
-          <p>National Electrical Code requirements for interconnected electric power production sources.</p>
+          <div class="standard-code">ITU-T</div>
+          <h3>International Standards</h3>
+          <p>Contributor to ITU-T optical transport standards including G.709 OTN and G.698 Raman amplification. Involved in international optical standards harmonization.</p>
         </div>
         <div class="standard-card animate-on-scroll">
-          <div class="standard-code">UL 1741</div>
-          <h3>Inverter Safety Standards</h3>
-          <p>Safety standard for inverters, converters, controllers for use in independent power production systems.</p>
+          <div class="standard-code">MSAs</div>
+          <h3>Multi-Source Agreements</h3>
+          <p>Technical contributor to numerous optical MSAs including QSFP-DD, OSFP, and COBO. Led interoperability testing and specification development for pluggable optics.</p>
         </div>
       </div>
     </div>
@@ -113,22 +122,22 @@
   <section class="experience" id="experience">
     <div class="container">
       <span class="section-label">Experience</span>
-      <h2>Career Highlights</h2>
+      <h2>25+ Years in<br>Optical Communications</h2>
       <div class="timeline">
         <div class="timeline-item animate-on-scroll">
-          <h3>Principal Engineer, Major Utility</h3>
-          <div class="period">2010 – Present</div>
-          <p>Lead engineer for distributed energy resource interconnection programs. Developed technical requirements adopted across multiple service territories. Managed engineering review of 500+ MW of solar and storage interconnections.</p>
+          <h3>Principal Optical Engineer, Major Networking Equipment Vendor</h3>
+          <div class="period">2015 – Present</div>
+          <p>Lead optical standards development for 100G/400G/800G Ethernet products. IEEE 802.3 working group member, OIF technical committee contributor. Managed multi-vendor interoperability testing and standards compliance.</p>
         </div>
         <div class="timeline-item animate-on-scroll">
-          <h3>IEEE Standards Association</h3>
-          <div class="period">2005 – Present</div>
-          <p>Voting member and working group contributor for IEEE 1547 family of standards. Participated in development of key amendments addressing grid support functions and advanced inverter requirements.</p>
+          <h3>Optical Standards & MSA Leadership</h3>
+          <div class="period">2005 – 2015</div>
+          <p>Technical leadership in optical MSAs including QSFP, CFP, and emerging pluggable form factors. Contributed to ITU-T G.709 OTN standards. Led industry forums for optical interoperability and testing methodologies.</p>
         </div>
         <div class="timeline-item animate-on-scroll">
-          <h3>Senior Electrical Engineer</h3>
-          <div class="period">1995 – 2010</div>
-          <p>Power systems design and protection engineering for utility and industrial clients. Specialized in medium-voltage switchgear, protective relay coordination, and arc flash studies.</p>
+          <h3>Senior Optical Design Engineer</h3>
+          <div class="period">2000 – 2005</div>
+          <p>Optical system design and characterization for high-speed communications. Developed early 10G/40G optical modules and contributed to industry standards for optical performance and reliability testing.</p>
         </div>
       </div>
     </div>
@@ -137,24 +146,24 @@
   <!-- Gallery Section -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <span class="section-label">In the Field</span>
-      <h2>Action Photos</h2>
+      <span class="section-label">Technical Work</span>
+      <h2>Standards &<br>Interoperability</h2>
       <div class="gallery-grid">
         <div class="gallery-item animate-on-scroll">
-          <div class="gallery-placeholder">Substation Visit</div>
-          <span class="gallery-caption">Substation inspection</span>
+          <div class="gallery-placeholder">IEEE 802.3 Meeting</div>
+          <span class="gallery-caption">IEEE 802.3 Ethernet standards session</span>
         </div>
         <div class="gallery-item animate-on-scroll">
-          <div class="gallery-placeholder">Panel Review</div>
-          <span class="gallery-caption">Electrical panel review</span>
+          <div class="gallery-placeholder">OIF Interop Testing</div>
+          <span class="gallery-caption">Multi-vendor interoperability testing</span>
         </div>
         <div class="gallery-item animate-on-scroll">
-          <div class="gallery-placeholder">Site Survey</div>
-          <span class="gallery-caption">Solar installation site survey</span>
+          <div class="gallery-placeholder">Optical Module Design</div>
+          <span class="gallery-caption">High-speed optical module development</span>
         </div>
         <div class="gallery-item animate-on-scroll">
-          <div class="gallery-placeholder">Standards Meeting</div>
-          <span class="gallery-caption">IEEE working group session</span>
+          <div class="gallery-placeholder">MSA Technical Committee</div>
+          <span class="gallery-caption">MSA specification development</span>
         </div>
       </div>
     </div>
@@ -164,29 +173,29 @@
   <section class="contact" id="contact">
     <div class="container">
       <span class="section-label">Contact</span>
-      <h2>Let's Work Together</h2>
-      <p class="contact-intro">Available for consulting engagements, standards development work, and expert witness services.</p>
+      <h2>Optical Standards<br>& Consulting Services</h2>
+      <p class="contact-intro">Available for optical standards consulting, interoperability guidance, and technical expertise in high-speed optical communications.</p>
       <div class="contact-methods">
         <div class="contact-method">
           <div class="contact-method-label">Email</div>
-          <a href="mailto:contact@speciphy.com">contact@speciphy.com</a>
+          <a href="mailto:david.lewis@speciphy.com">david.lewis@speciphy.com</a>
         </div>
         <div class="contact-method">
           <div class="contact-method-label">LinkedIn</div>
-          <a href="#">linkedin.com/in/yourname</a>
+          <a href="#">linkedin.com/in/david-lewis-optical</a>
         </div>
         <div class="contact-method">
           <div class="contact-method-label">Phone</div>
           <a href="tel:+15551234567">(555) 123-4567</a>
         </div>
       </div>
-      <a href="mailto:contact@speciphy.com" class="btn btn-primary">Send a Message</a>
+      <a href="mailto:david.lewis@speciphy.com" class="btn btn-primary">Start a Conversation</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Speciphy. All rights reserved.</p>
+    <p>&copy; 2025 Speciphy. Optical Standards Engineering & Consulting.</p>
   </footer>
 
   <script src="script.js"></script>
