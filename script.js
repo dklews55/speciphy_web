@@ -25,7 +25,7 @@ const observer = new IntersectionObserver((entries) => {
 animateElements.forEach(el => observer.observe(el));
 
 // Smooth scroll for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -38,50 +38,69 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu functionality
-function toggleMobileMenu() {
+// Mobile menu (hamburger)
+(function () {
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.mobile-menu');
-    
-    toggle.classList.toggle('active');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-}
+    const navEl = document.querySelector('nav');
+    if (!toggle || !menu) return;
 
-function closeMobileMenu() {
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.mobile-menu');
-    
-    toggle.classList.remove('active');
-    menu.style.display = 'none';
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', function(e) {
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.mobile-menu');
-    
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-        closeMobileMenu();
+    function syncNavHeightVar() {
+        if (!navEl) return;
+        const h = Math.ceil(navEl.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--nav-h', `${h}px`);
     }
-});
 
-// Optional: highlight nav links on scroll (simple approach)
-(function(){
-  const sections = Array.from(document.querySelectorAll('main section'));
-  const navLinks = Array.from(document.querySelectorAll('nav a'));
-  const linkMap = new Map(navLinks.map(a=>[a.getAttribute('href'), a]));
+    // Run once early and again after layout settles
+    syncNavHeightVar();
+    window.addEventListener('resize', syncNavHeightVar);
+    window.addEventListener('load', syncNavHeightVar);
 
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      const id = '#' + entry.target.id;
-      const link = linkMap.get(id);
-      if(!link) return;
-      if(entry.isIntersecting){
-        navLinks.forEach(l=>l.style.fontWeight='');
-        link.style.fontWeight = '700';
-      }
+    function openMenu() {
+        toggle.classList.add('active');
+        menu.classList.add('open');
+        document.body.classList.add('menu-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+    }
+
+    function closeMenu() {
+        toggle.classList.remove('active');
+        menu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+    }
+
+    function isOpen() {
+        return menu.classList.contains('open');
+    }
+
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        syncNavHeightVar();
+        if (isOpen()) closeMenu();
+        else openMenu();
     });
-  },{threshold:0.4});
 
-  sections.forEach(s=>obs.observe(s));
+    // Close when a link is clicked
+    menu.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener('click', () => closeMenu());
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!isOpen()) return;
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen()) closeMenu();
+    });
+
+    // If the viewport becomes desktop-sized, ensure menu is closed
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 640) closeMenu();
+    });
 })();

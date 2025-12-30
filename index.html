@@ -22,25 +22,43 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav-toggle" onclick="toggleMobileMenu()">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobileMenu">
       <ul>
-        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-        <li><a href="#standards" onclick="closeMobileMenu()">Standards</a></li>
-        <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
-        <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
-        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#standards">Standards</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-effect" aria-hidden="true">
+      <div class="grid-overlay"></div>
+
+      <div class="fiber-line fiber-line-1"></div>
+      <div class="fiber-line fiber-line-2"></div>
+      <div class="fiber-line fiber-line-3"></div>
+      <div class="fiber-line fiber-line-4"></div>
+
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+
+      <div class="node node-1"></div>
+      <div class="node node-2"></div>
+      <div class="node node-3"></div>
+      <div class="node node-4"></div>
+    </div>
     <div class="container">
       <div class="hero-content">
         <span class="hero-label">Optical Standards Engineer</span>
@@ -52,13 +70,6 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#standards" class="btn btn-secondary">View Standards Work</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="hero-image-wrapper">
-          <div class="hero-image-placeholder">
-            Professional Headshot
-          </div>
         </div>
       </div>
     </div>
@@ -183,10 +194,6 @@
         <div class="contact-method">
           <div class="contact-method-label">LinkedIn</div>
           <a href="#">linkedin.com/in/david-lewis-optical</a>
-        </div>
-        <div class="contact-method">
-          <div class="contact-method-label">Phone</div>
-          <a href="tel:+15551234567">(555) 123-4567</a>
         </div>
       </div>
       <a href="mailto:david.lewis@speciphy.com" class="btn btn-primary">Start a Conversation</a>
