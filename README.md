@@ -1,41 +1,41 @@
-# David Lewis - Electrical Engineering Consultant Website
+# Speciphy | Electrical Engineering Consulting Website
 
 A modern, professional single-page website for an independent electrical engineering consultant.
 
 ## Features
 
-- **Hero Section**: Name, title, value proposition, and professional headshot placeholder
-- **About**: Brief bio, 30+ years experience, areas of expertise
-- **Standards Contributions**: Visually appealing display of IEEE/NEC/other standards involvement
-- **Experience Highlights**: Key career accomplishments and notable projects
-- **Gallery**: 4 action photos with subtle hover effects
-- **Contact**: Simple contact form (opens email client) and contact information
+- **Hero Section**: Professional label, compelling headline, description, call-to-action buttons, and headshot placeholder
+- **About**: Engineering expertise overview with skills list
+- **Standards Contributions**: Grid of key standards with detailed descriptions
+- **Experience**: Timeline-style career highlights
+- **Gallery**: 4-column grid with hover effects and captions
+- **Contact**: Centered contact information with direct links
+- **Navigation**: Fixed navbar with scroll effects and smooth scrolling
 
 ## Design
 
-- Sophisticated, minimal aesthetic with ample whitespace
-- Subtle scroll-triggered fade-in and slide-up animations (vanilla JavaScript)
-- Smooth scrolling navigation
-- Alternating light/dark sections for visual rhythm
-- Fully responsive mobile design
-- Professional color palette: Navy (#0b2545), White, Accent (#ffb400)
-- Modern sans-serif typography (Inter from Google Fonts)
+- **Color Scheme**: Navy (#0a1628), Blue accent (#3b82f6), Clean grays and whites
+- **Typography**: Inter font family for modern, professional appearance
+- **Layout**: Full-width sections with generous spacing
+- **Animations**: Scroll-triggered fade-in animations and smooth transitions
+- **Mobile Responsive**: Optimized for all device sizes with mobile navigation
 
 ## Technical Details
 
 - Single HTML file with linked CSS and JavaScript
 - No frameworks or build steps required
-- Clean, well-commented code for easy modification
-- Uses IntersectionObserver for scroll animations
-- Contact form opens user's email client (no backend needed)
+- Modern CSS Grid and Flexbox layouts
+- Intersection Observer for scroll animations
+- Smooth scrolling navigation
+- Mobile-first responsive design
 
 ## File Structure
 
 ```
 /
 ├── index.html      # Main HTML structure
-├── style.css       # All styles and responsive design
-├── script.js       # JavaScript for animations and interactions
+├── style.css       # Complete styling with CSS variables
+├── script.js       # JavaScript for interactions and animations
 └── README.md       # This file
 ```
 
@@ -51,11 +51,13 @@ A modern, professional single-page website for an independent electrical enginee
 ## Customization
 
 - **Content**: Edit text directly in `index.html`
-- **Styling**: Modify variables in `style.css` (e.g., colors, fonts, spacing)
-- **Headshot**: Replace the SVG placeholder in the hero section with a real photo
-- **Gallery Images**: Update image URLs in the gallery section
-- **Contact Info**: Change email, phone, and LinkedIn in the contact section
+- **Colors**: Modify CSS variables in `:root` section of `style.css`
+- **Headshot**: Replace the placeholder div in the hero section with an actual image
+- **Gallery Images**: Update the placeholder divs with real images
+- **Contact Info**: Change email, phone, and LinkedIn links in the contact section
 
-## Placeholder Content
+## Browser Support
 
-All content is realistic dummy text for a 30+ year electrical engineering veteran. Replace with real information as needed.
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Graceful degradation for older browsers

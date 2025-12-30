@@ -1,56 +1,41 @@
-// ==========================
-// Lightweight JS: smooth interactions, reveal on scroll, simple contact handling
-// No frameworks, well-commented for beginners
-// ==========================
+// Navbar scroll effect
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
 
-// Smooth reveal on scroll using IntersectionObserver
-(function(){
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
+// Scroll animations
+const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
-  },{threshold:0.12});
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
 
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-})();
+animateElements.forEach(el => observer.observe(el));
 
-// Contact form: opens user's mail client with prefilled subject/body
-function handleContact(e){
-  e.preventDefault();
-  const email = document.getElementById('email').value || '';
-  const message = document.getElementById('message').value || '';
-  const subject = encodeURIComponent('Consulting inquiry from website');
-  const body = encodeURIComponent('Contact: ' + email + '\n\n' + message);
-  // Opens mail client; server-backed form can replace this later
-  window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
-  return false;
-}
-
-// Mobile menu toggle
-function toggleMenu(){
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.mobile-menu');
-  toggle.classList.toggle('open');
-  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-}
-
-function closeMenu(){
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.mobile-menu');
-  toggle.classList.remove('open');
-  menu.style.display = 'none';
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', function(e){
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.mobile-menu');
-  if(!toggle.contains(e.target) && !menu.contains(e.target)){
-    closeMenu();
-  }
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
 // Optional: highlight nav links on scroll (simple approach)
